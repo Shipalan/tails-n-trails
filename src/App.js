@@ -6,8 +6,8 @@ import shwayzeCollar from "./images/Products/shwayzeCollar.jpg";
 
 function App() {
   return (
-    <div className="container">
-      <header className="header">
+    <>
+      <header>
         <h3>Tails & Trails</h3>
         <nav className="navBarLinks">
           <p>Shop</p>
@@ -51,6 +51,7 @@ function App() {
             <p>Sample collars</p>
           </div>
         </section>
+
         <section className="home-product">
           <div className="productScroll">
             <img className="productImgs" src={shwayzeCollar} />
@@ -63,30 +64,30 @@ function App() {
           <div className="productScroll">
             <img className="productImgs" src={shwayzeCollar} />
             <div className="productInfo">
-            <h4>Shwayze Collar</h4>
-            <p>$25</p>
+              <h4>Shwayze Collar</h4>
+              <p>$25</p>
             </div>
             <a href="shop">Shop Item</a>
           </div>
           <div className="productScroll">
             <img className="productImgs" src={shwayzeCollar} />
             <div className="productInfo">
-            <h4>Shwayze Collar</h4>
-            <p>$25</p>
+              <h4>Shwayze Collar</h4>
+              <p>$25</p>
             </div>
             <a href="shop">Shop Item</a>
           </div>
           <div className="productScroll">
             <img className="productImgs" src={shwayzeCollar} />
             <div className="productInfo">
-            <h4>Shwayze Collar</h4>
-            <p>$25</p>
+              <h4>Shwayze Collar</h4>
+              <p>$25</p>
             </div>
             <a href="shop">Shop Item</a>
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
