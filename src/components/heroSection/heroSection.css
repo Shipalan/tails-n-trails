@@ -1,0 +1,19 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.heroPic {
+  width: 100%;
+  border-radius: 60px;
+}
+
+.sellingPoint {
+    text-align: center;
+}
+
+@media (max-width: 1150px) {
+    
+}

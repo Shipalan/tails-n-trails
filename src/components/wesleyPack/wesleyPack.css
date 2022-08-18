@@ -1,0 +1,30 @@
+.wesleyPack {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.imgs {
+    max-width: 550px;
+    border-radius: 60px;
+}
+
+.sampleCollar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 1150px) {
+    .imgs {
+        margin-bottom: 50px;
+    }
+    .sampleCollar {
+        gap: 5px;
+    }
+}

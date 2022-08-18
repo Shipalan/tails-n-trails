@@ -1,0 +1,42 @@
+.mobileNavigation {
+  display: none;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+
+.navBar h3 {
+    font-size: 1.9em;
+}
+
+.navBarLinks {
+  display: flex;
+  gap: 30px;
+  font-size:1.3em
+}
+
+
+
+
+@media (max-width: 1150px) {
+  .navBar .Navigation {
+    display: none;
+  }
+  .navBar .mobileNavigation {
+    display: flex;
+    background-color: red;
+    align-items: center;
+  }
+  .hamburgerMenu {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+  }
+  
+  
+}

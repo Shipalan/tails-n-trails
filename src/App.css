@@ -136,187 +136,71 @@ table {
 
 body {
   background-color: rgb(238, 237, 235);
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  font-family: "Roboto Condensed", sans-serif;
+}
+
+h6 {
+  font-size: 8em;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 7em;
+}
+
+p {
+  font-size: 1.3em;
 }
 
 .container {
   max-width: 1920px;
-  
-  padding: 0 50px;
+  padding: 30px;
 }
 
-h3 {
-  font-size: 1.5em;
+
+/*^ Media queries ----------------------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1150px) {
+    h6 {
+      font-size: 4em;
+      
+    }
+    h1 {
+      font-size: 1.8em;
+    }
+    h2 {
+      font-size: 3.5em;
+    }
+    h4 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.8em;
+      line-height: 1.2;
+    }
+    a {
+      font-size: 1.8em;
+    }
+    .footerElement {
+      min-height: 10vh;
+    }
+    .home-product {
+      background-color: rgb(225, 204, 190);
+      padding: 50px;
+    }
 }
 
-h4 {
-  font-size: 2em;
-}
 /** Header values--------------------------------- */
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid black;
-  padding: 35px 0;
-}
-
-.header p {
-  font-size: 18px;
-}
-.navBar {
-  display: flex;
-  gap: 50px;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.navBarLinks {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  font-size: 18px;
-}
 
 /** main values------------------------------------------- */
 
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.heroTitle {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 200px;
-}
-
-.sellingPoint {
-  width: 100%;
-  font-size: 5em;
-  text-align: center;
-}
-
-.h1Title {
-  font-size: 2em;
-}
-
-.heroPic img {
-  width: 100%;
-  border-radius: 40px;
-}
-
-.welcome {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 50px;
-}
-
-.welcome h2 {
-  font-size: 6em;
-  max-width: 600px;
-  line-height: 1.2em;
-}
-
-.businessMoto {
-  padding-top: 1.2em;
-  max-width: 550px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.businessMoto p {
-  font-size: 1.5em;
-  line-height: 1.2em;
-}
-
-.businessMoto a {
-  font-size: 1.5em;
-  color: inherit;
-}
-
-.wesleyPack {
-  padding-top: 180px;
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.imgs {
-  border-radius: 40px;
-}
-
-.sampleCollar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.sampleCollar p {
-  font-size: 1.5em;
-}
-
-.home-product {
-  display: flex;
-  align-items: center;
-  gap: 70px;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: 100px;
-  /* min-height: 1000px; */
-  min-height: 1000px;
-  background-color: rgb(225, 204, 190);
-  width: 100;
-  padding-left: 50px;
-  /* display: inline-block; */
-}
-
 .productImgs {
-  border-radius: 40px;
-  width: 500px;
-  margin-bottom: 30px;
-}
-
-.productScroll {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  min-height: 800px;
-}
-
-.productInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-.productScroll p {
-  font-size: 2em;
-}
-
-.productScroll a {
-  font-size: 1.3em;
+  max-width: 350px;
 }
