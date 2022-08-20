@@ -10,6 +10,7 @@
 
 .imgs {
     max-width: 550px;
+    margin: 20px;
     border-radius: 60px;
 }
 
@@ -20,11 +21,17 @@
     gap: 20px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .imgs {
         margin-bottom: 50px;
     }
     .sampleCollar {
         gap: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .imgs {
+        max-width: 300px;
     }
 }

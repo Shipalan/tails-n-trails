@@ -1,6 +1,6 @@
 import React from "react";
 import "./heroSection.css";
-import dogPic from "../../images/Dogs/dog-collar.png";
+import dogPic from "../../../../images/Dogs/dog-collar.png";
 
 const HeroSection = () => {
   return (

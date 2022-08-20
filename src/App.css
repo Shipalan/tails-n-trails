@@ -134,6 +134,9 @@ table {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 15px;
+}
 body {
   background-color: rgb(238, 237, 235);
   font-family: "Roboto Condensed", sans-serif;
@@ -155,7 +158,11 @@ h2 {
 }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.7rem;
+}
+
+a {
+  font-size: 1.7rem;
 }
 
 .container {
@@ -163,44 +170,51 @@ p {
   padding: 30px;
 }
 
+.footerElement {
+  min-height: 10vh;
+}
 
 /*^ Media queries ----------------------------------------------------------------------------------------------------------- */
 
-@media (max-width: 1150px) {
-    h6 {
-      font-size: 4em;
-      
-    }
-    h1 {
-      font-size: 1.8em;
-    }
-    h2 {
-      font-size: 3.5em;
-    }
-    h4 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1.8em;
-      line-height: 1.2;
-    }
-    a {
-      font-size: 1.8em;
-    }
-    .footerElement {
-      min-height: 10vh;
-    }
-    .home-product {
-      background-color: rgb(225, 204, 190);
-      padding: 50px;
-    }
+@media (max-width: 1200px) {
+  h6 {
+    font-size: 4em;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 3.5em;
+  }
+  h4 {
+    font-size: 2em;
+  }
+  p {
+    line-height: 1.2;
+  }
+
+ 
+  
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+
+  h6 {
+    font-size: 2.5em;
+  }
+
+h1{
+  font-size: 1.2em;
+}
+h2 {
+  font-size: 2.5em;
+}
 }
 
 /** Header values--------------------------------- */
 
-
 /** main values------------------------------------------- */
 
-.productImgs {
-  max-width: 350px;
-}

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import NavLinks from "./NavLinks";
 import "./NavBar.css";
 import { IoMdMenu } from "react-icons/io/index";
-
+import NavLinks from "./NavLinks";
 
 const MobileNavigation = () => {
   const [open, setOpen] = useState(false);
@@ -16,7 +15,7 @@ const MobileNavigation = () => {
         onClick={() => setOpen(!open)}
       />
       {open && (
-        <div className="mobileNavLinks">
+        <div>
           <NavLinks />
         </div>
       )}

@@ -1,7 +1,7 @@
 import React from "react";
 import './wesleyPack.css'
-import wesleyPack from "../../images/Dogs/wesleyPack.png";
-import collarWesleyPack from "../../images/Products/collar-wesleyPack.png";
+import wesleyPack from "../../../../images/Dogs/wesleyPack.png";
+import collarWesleyPack from "../../../../images/Products/collar-wesleyPack.png";
 
 const WesleyPack = () => {
   return (
