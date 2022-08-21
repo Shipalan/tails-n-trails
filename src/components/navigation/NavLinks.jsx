@@ -4,12 +4,23 @@ import { NavLink } from "react-router-dom";
 
 const NavLinks = () => {
   return (
-    <nav className="navBarLinks">
+    <nav className="navBarLinks mobileNavLinks">
       <ul className="navList">
-        <NavLink to="/Shop">Shop</NavLink>
-        <NavLink to="/About">About</NavLink>
-        <NavLink to="/Contact">Contact</NavLink>
-        <NavLink to="/Cart">Cart</NavLink>
+        <li>
+          <NavLink className="link" to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/Shop">Shop</NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/About">About</NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/Contact">Contact</NavLink>
+        </li>
+        <li>
+          <NavLink className="link" to="/Cart">Cart</NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -11,7 +11,6 @@ const Home = () => {
         <BusinessMoto />
         <WesleyPack />
       </div>
-      <section className="home-product"></section>
     </>
   );
 };

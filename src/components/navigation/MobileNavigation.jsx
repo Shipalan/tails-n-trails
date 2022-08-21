@@ -14,11 +14,7 @@ const MobileNavigation = () => {
         color="black"
         onClick={() => setOpen(!open)}
       />
-      {open && (
-        <div>
-          <NavLinks />
-        </div>
-      )}
+      {open && <NavLinks className="mobileNavLinks"/>}
     </nav>
   );
 };
