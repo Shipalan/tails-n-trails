@@ -165,10 +165,15 @@ a {
   font-size: 1.7rem;
 }
 
-.container {
+main {
   max-width: 1920px;
   padding: 30px;
 }
+
+/* .container {
+  max-width: 1920px;
+  padding: 30px;
+} */
 
 .footerElement {
   min-height: 10vh;

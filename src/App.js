@@ -6,10 +6,12 @@ import Cart from "./components/pages/cart/Cart";
 import Home from "./components/pages/home/Home";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import NavBar from "./components/navigation/NavBar";
 
 function App() {
   return (
     <Layout>
+        <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Shop" element={<Shop />} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./businessMoto.css";
 
@@ -14,7 +15,7 @@ const BusinessMoto = () => {
               Maybe you want to turn a hobby into something more. Or maybe you
               have a creative project to share with the world.
             </p>
-            <a href="./About"> Learn About us {">"}</a>
+            <NavLink className="aboutLink" to="/About"> Learn About us {">"}</NavLink>
           </div>
         </div>
       </article>

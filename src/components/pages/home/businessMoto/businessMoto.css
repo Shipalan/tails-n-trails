@@ -19,6 +19,14 @@
   gap: 20px;
 }
 
+.aboutLink {
+  color: black;
+}
+
+.aboutLink:hover {
+  text-shadow: 0 3px 5px tan;
+}
+
 @media (max-width: 1200px) {
   .welcome {
     display: flex;
