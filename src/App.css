@@ -164,16 +164,17 @@ p {
 a {
   font-size: 1.7rem;
 }
-
+/* 
 main {
   max-width: 1920px;
   padding: 30px;
-}
+} */
 
-/* .container {
+.container {
+  width: 100%;
   max-width: 1920px;
   padding: 30px;
-} */
+}
 
 .footerElement {
   min-height: 10vh;

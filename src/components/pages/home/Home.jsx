@@ -6,11 +6,9 @@ import WesleyPack from "./wesleyPack/WesleyPack";
 const Home = () => {
   return (
     <>
-      <div className="container">
-        <HeroSection />
-        <BusinessMoto />
-        <WesleyPack />
-      </div>
+      <HeroSection />
+      <BusinessMoto />
+      <WesleyPack />
     </>
   );
 };
