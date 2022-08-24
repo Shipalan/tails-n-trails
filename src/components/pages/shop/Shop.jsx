@@ -11,19 +11,19 @@ const Shop = () => {
       .get("http://localhost:4000/api/allProducts")
       .then((res) => {
         setProducts(res.data);
-        // console.log(res.data)
+        console.log(products)
+        console.log(res.data)
       })
       .catch((err) => {
         console.log("ID-10-t error");
         console.log(err);
       });
-    };
-    
-    useEffect(() => {
-      getProducts();
-      console.log(products)
+  };
+
+  useEffect(() => {
+    getProducts();
   }, []);
- 
+  console.log()
 
   return (
     <div>
@@ -31,7 +31,7 @@ const Shop = () => {
       products.map((p, i) => {
         return (
           <div key={i}>
-            <img src={`${pic}/${p.product_img}`} alt="Product" />
+            <img src={require(`${pic}/${p.product_img}`)} alt="Product" />
             <p>{p.product_price}</p>
             <p>{p.product_description}</p>
           </div>
