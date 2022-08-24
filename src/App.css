@@ -170,7 +170,7 @@ main {
   padding: 30px;
 } */
 
-.container {
+.container{
   width: 100%;
   max-width: 1920px;
   padding: 30px;
@@ -183,6 +183,9 @@ main {
 /*^ Media queries ----------------------------------------------------------------------------------------------------------- */
 
 @media (max-width: 1200px) {
+  .container {
+    width: 100%;
+  }
   h6 {
     font-size: 4em;
   }
@@ -205,7 +208,7 @@ main {
 
 @media (max-width: 600px) {
   .container {
-    max-width: 600px;
+    width: 100%;
   }
 
   h6 {

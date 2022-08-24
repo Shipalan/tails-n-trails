@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Shop.css";
-const pic = "../../../images/Products"
 const axios = require("axios");
+
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -30,9 +30,9 @@ const Shop = () => {
       {products.length > 0 &&
       products.map((p, i) => {
         return (
-          <div key={i}>
-            <img src={require(`${pic}/${p.product_img}`)} alt="Product" />
-            <p>{p.product_price}</p>
+          <div className="productCard" key={i}>
+            <img src={p.product_img} alt="Product" className="productImg mobileProductImg"/>
+            <p className="productPrice">{`$${p.product_price}`}</p>
             <p>{p.product_description}</p>
           </div>
         );

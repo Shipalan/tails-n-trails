@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
+document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
 // import 'https://fonts.googleapis.com/css?family=Roboto+Mono:regular'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
