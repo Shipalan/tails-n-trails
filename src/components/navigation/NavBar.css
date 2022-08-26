@@ -14,14 +14,6 @@
   display: flex;
 }
 
-
-
-.cartContainer {
-  min-width: 33%;
-  display: flex;
-  justify-content: flex-end;
-}
-
 .navBar {
   display: flex;
   align-items: center;
@@ -78,7 +70,7 @@
   .navBar {
     position: relative;
   }
-  .mobileNavLinks{
+  .mobileNavLinks {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -95,9 +87,8 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
-    
   }
-  .link{
+  .link {
     text-decoration: none;
     color: black;
   }

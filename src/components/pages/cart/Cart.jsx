@@ -11,8 +11,6 @@ const Cart = () => {
     setCart(newCart);
   };
 
-  
-
   return (
     <div>
       <h4 className="cartTitle">Items in your cart</h4>
@@ -28,14 +26,16 @@ const Cart = () => {
                     className="productImg mobileProductImg"
                   />
                 </div>
-                <p className="productPrice">{`$${p.product_price}`}</p>
-                <p className="desc">{p.product_description}</p>
-                <button
-                  onClick={() => HandleClick(p)}
-                  className="removeFromCart"
-                >
-                  Remove from cart
-                </button>
+                <article className="productInfo">
+                  <p className="productPrice productPriceCart">{`$${p.product_price}`}</p>
+                  <p className="desc desc-cart">{p.product_description}</p>
+                  <button
+                    onClick={() => HandleClick(p)}
+                    className="removeFromCart"
+                  >
+                    X
+                  </button>
+                </article>
               </div>
             );
           })}

@@ -164,6 +164,12 @@ p {
 a {
   font-size: 1.7rem;
 }
+
+#root{
+  min-width: 100%;
+  max-width: 1920px;
+  padding: 30px;
+}
 /* 
 main {
   max-width: 1920px;
@@ -171,7 +177,7 @@ main {
 } */
 
 .container{
-  width: 100%;
+  min-width: 100%;
   max-width: 1920px;
   padding: 30px;
 }
