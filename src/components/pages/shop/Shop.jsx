@@ -1,18 +1,19 @@
-import React, { useEffect, useState } from "react";
+import { cartContext } from "../../../App";
+import React, { useEffect, useState, useContext } from "react";
 import "./Shop.css";
 const axios = require("axios");
 
-
 const Shop = () => {
   const [products, setProducts] = useState([]);
+  const { cart, setCart } = useContext(cartContext);
 
   const getProducts = () => {
     axios
       .get("http://localhost:4000/api/allProducts")
       .then((res) => {
         setProducts(res.data);
-        console.log(products)
-        console.log(res.data)
+        // console.log(products[0].products_id);
+        // console.log(res.data);
       })
       .catch((err) => {
         console.log("ID-10-t error");
@@ -23,20 +24,37 @@ const Shop = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  console.log()
+  // console.log(products.product_id);
+
+  const HandleClick = (item) => {
+    let id = new Date().getTime();
+    item.id = id;
+    console.log(item);
+    setCart([...cart, item]);
+  };
 
   return (
-    <div>
+    <div className="productCardContainer">
       {products.length > 0 &&
-      products.map((p, i) => {
-        return (
-          <div className="productCard" key={i}>
-            <img src={p.product_img} alt="Product" className="productImg mobileProductImg"/>
-            <p className="productPrice">{`$${p.product_price}`}</p>
-            <p>{p.product_description}</p>
-          </div>
-        );
-      })}
+        products.map((p, i) => {
+          return (
+            <div className="productCard" key={i}>
+              {/* {console.log(p)} */}
+              <div className="imgContainer">
+                <img
+                  src={p.product_img}
+                  alt="Product"
+                  className="productImg mobileProductImg"
+                />
+              </div>
+              <p className="productPrice">{`$${p.product_price}`}</p>
+              <p className="desc">{p.product_description}</p>
+              <button onClick={() => HandleClick(p)} className="addToCart">
+                Add to Cart
+              </button>
+            </div>
+          );
+        })}
     </div>
   );
 };

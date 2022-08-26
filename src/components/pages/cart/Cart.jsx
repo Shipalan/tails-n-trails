@@ -1,9 +1,49 @@
-import React from 'react'
+import { cartContext } from "../../../App";
+import "./Cart.css";
+import React, { useContext } from "react";
 
 const Cart = () => {
-  return (
-    <p>Cart</p>
-  )
-}
+  const { cart, setCart } = useContext(cartContext);
 
-export default Cart
+  const HandleClick = (item) => {
+    console.log(item, "ID #");
+    const find = cart.findIndex((p) => p.id === item);
+    console.log(find, "Find the index number");
+    const newCart = [...cart.splice(find, 1)]
+    console.log(cart, "New cart")
+
+    setCart(newCart)
+  };
+
+  return (
+    <div>
+      <h4 className="cartTitle">Items in your cart</h4>
+      <section className="cartContainer">
+        {cart.length > 0 &&
+          cart.map((p, i) => {
+            return (
+              <div className="productCard" key={i}>
+                <div className="imgContainer">
+                  <img
+                    src={p.product_img}
+                    alt="Product"
+                    className="productImg mobileProductImg"
+                  />
+                </div>
+                <p className="productPrice">{`$${p.product_price}`}</p>
+                <p className="desc">{p.product_description}</p>
+                <button
+                  onClick={() => HandleClick(p.id)}
+                  className="removeFromCart"
+                >
+                  Remove from cart
+                </button>
+              </div>
+            );
+          })}
+      </section>
+    </div>
+  );
+};
+
+export default Cart;

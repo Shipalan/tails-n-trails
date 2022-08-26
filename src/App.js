@@ -6,22 +6,26 @@ import Cart from "./components/pages/cart/Cart";
 import Home from "./components/pages/home/Home";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
+import React, { useContext, useReducer, useState } from "react";
 
+export const cartContext = React.createContext();
 
 function App() {
+  const [cart, setCart] = useState([]);
+
   return (
-    <Layout>
-        {/* <NavBar /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Shop" element={<Shop />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/Cart" element={<Cart />} />
-      </Routes>
-    </Layout>
+    <cartContext.Provider value={{ cart, setCart }}>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Cart" element={<Cart />} />
+        </Routes>
+      </Layout>
+    </cartContext.Provider>
   );
 }
 
 export default App;
-
