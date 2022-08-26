@@ -4,16 +4,14 @@ import React, { useContext } from "react";
 
 const Cart = () => {
   const { cart, setCart } = useContext(cartContext);
-
+  // console.log(cart)
   const HandleClick = (item) => {
-    console.log(item, "ID #");
-    const find = cart.findIndex((p) => p.id === item);
-    console.log(find, "Find the index number");
-    const newCart = [...cart.splice(find, 1)]
-    console.log(cart, "New cart")
-
-    setCart(newCart)
+    let newCart = [...cart];
+    newCart.splice(newCart.indexOf(item), 1);
+    setCart(newCart);
   };
+
+  
 
   return (
     <div>
@@ -22,7 +20,7 @@ const Cart = () => {
         {cart.length > 0 &&
           cart.map((p, i) => {
             return (
-              <div className="productCard" key={i}>
+              <div className="productCardCart" key={i}>
                 <div className="imgContainer">
                   <img
                     src={p.product_img}
@@ -33,7 +31,7 @@ const Cart = () => {
                 <p className="productPrice">{`$${p.product_price}`}</p>
                 <p className="desc">{p.product_description}</p>
                 <button
-                  onClick={() => HandleClick(p.id)}
+                  onClick={() => HandleClick(p)}
                   className="removeFromCart"
                 >
                   Remove from cart

@@ -6,14 +6,12 @@ const axios = require("axios");
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useContext(cartContext);
-
+  
   const getProducts = () => {
     axios
       .get("http://localhost:4000/api/allProducts")
       .then((res) => {
         setProducts(res.data);
-        // console.log(products[0].products_id);
-        // console.log(res.data);
       })
       .catch((err) => {
         console.log("ID-10-t error");
@@ -24,12 +22,10 @@ const Shop = () => {
   useEffect(() => {
     getProducts();
   }, []);
-  // console.log(products.product_id);
 
   const HandleClick = (item) => {
     let id = new Date().getTime();
     item.id = id;
-    console.log(item);
     setCart([...cart, item]);
   };
 
