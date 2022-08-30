@@ -9,7 +9,7 @@ const Shop = () => {
   console.log(cart)
   const getProducts = () => {
     axios
-      .get("/api/allProducts")
+      .get("http://localhost:4000/api/allProducts")
       .then((res) => {
         setProducts(res.data);
       })
