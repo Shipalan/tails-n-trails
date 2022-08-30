@@ -6,10 +6,10 @@ const axios = require("axios");
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const { cart, setCart } = useContext(cartContext);
-  
+  console.log(cart)
   const getProducts = () => {
     axios
-      .get("http://localhost:4000/api/allProducts")
+      .get("/api/allProducts")
       .then((res) => {
         setProducts(res.data);
       })
