@@ -9,7 +9,7 @@ const Shop = () => {
   console.log(cart)
   const getProducts = () => {
     axios
-      .get("/api/allProducts")
+      .get("https://tails-and-trails.herokuapp.com//api/allProducts")
       .then((res) => {
         setProducts(res.data);
       })
