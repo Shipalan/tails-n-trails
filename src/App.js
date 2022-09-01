@@ -4,6 +4,7 @@ import About from "./components/pages/about/About";
 import Contact from "./components/pages/contact/Contact";
 import Cart from "./components/pages/cart/Cart";
 import Home from "./components/pages/home/Home";
+import Login from "./components/pages/Login/Login";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import React, { useEffect, useState } from "react";
@@ -55,6 +56,7 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
+          <Route path="/Login" element={<Login />} />
         </Routes>
       </Layout>
     </cartContext.Provider>
