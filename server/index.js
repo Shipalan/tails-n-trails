@@ -4,11 +4,12 @@ const express = require("express");
 
 const app = express();
 const cors = require("cors");
-const PORT = process.env.PORT || 4000;
+const { PORT } = process.env;
 const path = require("path");
 
 app.use(cors());
 app.use(express.json());
+app.use(express.static(path.resolve(__dirname, "../build")));
 
 const { getProducts, getUser } = require("./controller");
 
