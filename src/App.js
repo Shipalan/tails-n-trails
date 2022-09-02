@@ -13,39 +13,7 @@ export const cartContext = React.createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
-  // console.log(cart);
 
-  // function storage(cart) {
-  //   if (cart.length > 0) {
-  //     let db = cart.map((e) => {
-  //       let data = {
-  //         img: e.product_img,
-  //         price: e.product_price,
-  //         desc: e.product_description,
-  //       };
-  //       return data;
-  //     });
-  //     db = [...db];
-  //     console.log(db)
-  //     sessionStorage.setItem("cart", JSON.stringify(db));
-  //   } else {
-  //     return null;
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   storage(cart);
-  // }, [cart]);
-
-  // useEffect(() => {
-  //   let data = sessionStorage.getItem("cart");
-  //   // console.log(data);
-
-  //   const item = JSON.parse(data);
-  //   console.log(item);
-
-  //    setCart(item)
-  // }, []);
 
   return (
     <cartContext.Provider value={{ cart, setCart }}>
@@ -56,7 +24,6 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/Cart" element={<Cart />} />
-          <Route path="/Login" element={<Login />} />
         </Routes>
       </Layout>
     </cartContext.Provider>

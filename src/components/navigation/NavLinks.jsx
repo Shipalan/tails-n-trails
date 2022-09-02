@@ -31,11 +31,6 @@ const NavLinks = (props) => {
             Cart
           </NavLink>
         </li>
-        <li>
-          <NavLink className="link" to="/Login">
-            Login
-          </NavLink>
-        </li>
       </ul>
     </nav>
   );
