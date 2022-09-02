@@ -4,12 +4,6 @@ const axios = require("axios");
 const Login = () => {
   const [user, setUser] = useState({ username: "", password: "" });
   //   console.log(user);
-  const db = [
-    {
-      username: "user1",
-      password: "test",
-    },
-  ];
 
   const inputHandler = (e) => {
     // console.log(e);
