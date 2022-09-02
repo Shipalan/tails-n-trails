@@ -22,7 +22,7 @@ const Login = () => {
       return alert("All fields required");
     }
     console.log(user);
-    axios.post("http://localhost:4000/api/verifyUser", user).then((res) => {
+    axios.post("https://tails-and-trails.herokuapp.com/api/verifyUser", user).then((res) => {
       console.log(res.data);
     });
   };
