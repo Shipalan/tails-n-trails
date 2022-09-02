@@ -6,10 +6,13 @@ const app = express();
 const cors = require("cors");
 const PORT = process.env.PORT || 4000;
 app.use(cors());
+app.use(express.json())
 
-const { getProducts } = require("./controller");
+const { getProducts, getUser } = require("./controller");
 
 app.get("/api/allProducts", getProducts);
+
+app.post("/api/verifyUser", getUser)
 
 //* Server port configuration ------------------------------------------------------------*/
 

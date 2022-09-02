@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+const axios = require("axios");
 
 const Login = () => {
   const [user, setUser] = useState({ username: "", password: "" });
-//   console.log(user);
+  //   console.log(user);
   const db = [
     {
       username: "user1",
@@ -19,9 +20,11 @@ const Login = () => {
     e.preventDefault();
     if (user.username === "" || user.password === "") {
       return alert("All fields required");
-    } else {
-      console.log(user);
     }
+    console.log(user);
+    axios.post("http://localhost:4000/api/verifyUser", user).then((res) => {
+      console.log(res.data);
+    });
   };
 
   return (
@@ -33,7 +36,7 @@ const Login = () => {
           type="text"
           name="username"
           onChange={inputHandler}
-        //   required
+          required
         />
       </label>
       <label>
@@ -42,7 +45,7 @@ const Login = () => {
           type="password"
           name="password"
           onChange={inputHandler}
-        //   required
+          required
         />
       </label>
       <input type="submit" onClick={handleForm} />
