@@ -15,9 +15,9 @@ const Login = () => {
     if (user.username === "" || user.password === "") {
       return alert("All fields required");
     }
-    console.log(user);
+    // console.log(user);
     axios.post("http://localhost:4000/api/verifyUser", user).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
     });
   };
 
