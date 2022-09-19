@@ -1,8 +1,3 @@
-const bcrypt = require("bcrypt");
-const saltRounds = 10;
-const myPlainTextPassword = "s0//P4$$w0rD";
-const someOtherPlainTextPassword = "not_bacon";
-
 require("dotenv").config();
 const { DATABASE_URL } = process.env;
 
