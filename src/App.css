@@ -165,7 +165,7 @@ a {
   font-size: 1.7rem;
 }
 
-#root {
+#root{
   width: 100%;
   max-width: 1920px;
   padding: 30px;
@@ -210,6 +210,13 @@ main {
 }
 
 @media (max-width: 600px) {
+
+  #root{
+    width: 100%;
+    max-width: 1920px;
+    padding: 10px;
+  }
+
   .container {
     width: 100%;
   }
