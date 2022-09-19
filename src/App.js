@@ -4,16 +4,14 @@ import About from "./components/pages/about/About";
 import Contact from "./components/pages/contact/Contact";
 import Cart from "./components/pages/cart/Cart";
 import Home from "./components/pages/home/Home";
-import Login from "./components/pages/Login/Login";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 export const cartContext = React.createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
-
 
   return (
     <cartContext.Provider value={{ cart, setCart }}>
