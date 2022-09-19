@@ -1,9 +1,9 @@
 require("dotenv").config();
-const { DATABASE_URL } = process.env;
+const { CONNECTION_STRING } = process.env;
 
 const Sequelize = require("sequelize");
 
-const sequelize = new Sequelize(DATABASE_URL, {
+const sequelize = new Sequelize(CONNECTION_STRING, {
   dialect: "postgres",
   dialectOptions: {
     ssl: {
@@ -23,21 +23,21 @@ module.exports = {
       });
   },
   getUser: (req, res) => {
-    const { username, password } = req.body;
+    const {username, password} = req.body
     // console.log(username, password);
-
+    
     sequelize
       .query("SELECT employee_user, employee_password FROM employee")
       .then((dbRes) => {
-        const { employee_user, employee_password } = dbRes[0][0];
+        const {employee_user, employee_password} = dbRes[0][0]
         // console.log(dbRes[0])
 
         if (username === employee_user) {
           if (password === employee_password) {
-            res.status(200).send("Login Successful");
+            res.status(200).send('Login Successful')
           }
         } else {
-          res.status(400).send("login or username incorrect");
+          res.status(400).send('login or username incorrect')
         }
       });
   },
