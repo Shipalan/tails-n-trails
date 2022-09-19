@@ -21,11 +21,11 @@ const NavLinks = (props) => {
             About
           </NavLink>
         </li>
-        {/*<li>
+        <li>
           <NavLink className="link" to="/Contact">
             Contact
           </NavLink>
-        </li> */}
+        </li>
         <li>
           <NavLink className="link" to="/Cart">
             Cart
